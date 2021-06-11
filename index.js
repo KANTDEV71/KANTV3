@@ -1,6 +1,6 @@
 /*Olá usuário..
 Este bot foi criado para o uso sem fins lucrativos
-Criador: Italu
+Criador: KANT
 Colaboradores: Resen e Toin
 */
 
@@ -126,7 +126,7 @@ const IA = () => {
 		//TESTE PARA TENTATIVA DE VITÓRIA
 		(esp.a1=="⭕"&&esp.a2=="⭕"&&esp.a3=="🔲") || (esp.a1=="⭕"&&esp.a2=="🔲"&&esp.a3=="⭕") || (esp.a1=="🔲"&&esp.a2=="⭕"&&esp.a3=="⭕") ||
 		(esp.b1=="⭕"&&esp.b2=="⭕"&&esp.b3=="🔲") || (esp.b1=="⭕"&&esp.b2=="🔲"&&esp.b3=="⭕") || (esp.b1=="🔲"&&esp.b2=="⭕"&&esp.b3=="⭕") ||
-		(esp.c1=="⭕"&&esp.c2=="⭕"&&esp.c3=="🔲") || (esp.c1=="⭕"&&esp.c2=="🔲"&&esp.c3=="⭕") || (esp.c1=="🔲"&&esp.c2=="⭕"&&esp.c3=="⭕") ||
+		 || (esp.c1=="⭕"&&esp.c2=="🔲"&&esp.c3=="⭕") || (esp.c1=="🔲"&&esp.c2=="⭕"&&esp.c3=="⭕") ||
 		(esp.a1=="⭕"&&esp.b1=="⭕"&&esp.c1=="🔲") || (esp.a1=="⭕"&&esp.b1=="🔲"&&esp.c1=="⭕") || (esp.a1=="🔲"&&esp.b1=="⭕"&&esp.c1=="⭕") ||
 		(esp.a2=="⭕"&&esp.b2=="⭕"&&esp.c2=="🔲") || (esp.a2=="⭕"&&esp.b2=="🔲"&&esp.c2=="⭕") || (esp.a2=="🔲"&&esp.b2=="⭕"&&esp.c2=="⭕") ||
 		(esp.a3=="⭕"&&esp.b3=="⭕"&&esp.c3=="🔲") || (esp.a3=="⭕"&&esp.b3=="🔲"&&esp.c3=="⭕") || (esp.a3=="🔲"&&esp.b3=="⭕"&&esp.c3=="⭕") ||
@@ -552,12 +552,12 @@ async function starts() {
 	const tiringa = new WAConnection()
 	tiringa.logger.level = 'warn'
 	console.log(banner.string)
-	tiringa.on('qr', () => {
+	KANT.on('qr', () => {
 		console.log(color('👆'), color(' Escanear o código acima para iniciar o kant-BOT!'))
 	})
 
 	fs.existsSync('./tiringa.json') && tiringa.loadAuthInfo('./kant.json')
-	tiringa.on('connecting', () => {
+	KANT.on('connecting', () => {
 		start('2', 'Conectando o kant-BOT...')
 	})
 	tiringa.on('open', () => {
@@ -675,7 +675,7 @@ var patt = 'Bronze I🥉'
 if (nivelAtual === 1) {patt = 'Bronze  I🥉' } else if (nivelAtual === 2) {patt = 'Bronze II🥉'} else if (nivelAtual === 3) {patt = 'Bronze  III🥉'} else if (nivelAtual === 4) {patt = 'Bronze  IV🥉'} else if (nivelAtual === 5) {patt = 'Bronze  V🥉'} else if (nivelAtual === 6) {patt = 'Prata I🥈'} else if (nivelAtual === 7) {patt = 'Prata II🥈'} else if (nivelAtual === 8) {patt = 'Prata III🥈'} else if (nivelAtual === 9) {patt = 'Prata IV🥈'} else if (nivelAtual === 10) {patt = 'Prata V🥈'} else if (nivelAtual === 11) {patt = 'Ouro I🥇'} else if (nivelAtual === 12) {patt = 'Ouro II🥇'} else if (nivelAtual === 13) {patt = 'Ouro III🥇'} else if (nivelAtual === 14) {patt = 'Ouro IV🥇'} else if (nivelAtual === 15) {patt = 'Ouro V🥇'} else if (nivelAtual === 16) {patt = 'Campeão I🏆'} else if (nivelAtual === 17) {patt = 'Campeão II🏆'} else if (nivelAtual === 18) {patt = 'Campeão III🏆'} else if (nivelAtual === 19) {patt = 'Campeão IV🏆'} else if (nivelAtual === 20) {patt = 'Campeão V🏆'} else if (nivelAtual === 21) {patt = 'Diamante I 💎'} else if (nivelAtual === 22) {patt = 'Diamante II 💎'} else if (nivelAtual === 23) {patt = 'Diamante III 💎'} else if (nivelAtual === 24) {patt = 'Diamante IV 💎'} else if (nivelAtual === 25) {patt = 'Diamante V 💎'} else if (nivelAtual === 26) {patt = 'Mestre I 🐂'} else if (nivelAtual === 27) {patt = 'Mestre II 🐂'} else if (nivelAtual === 28) {patt = 'Mestre III 🐂'} else if (nivelAtual === 29) {patt = 'Mestre IV 🐂'} else if (nivelAtual === 30) {patt = 'Mestre V 🐂'} else if (nivelAtual === 31) {patt = 'Mítico I 🔮'} else if (nivelAtual === 32) {patt = 'Mítico II 🔮'} else if (nivelAtual === 33) {patt = 'Mítico III 🔮'} else if (nivelAtual === 34) {patt = 'Mítico IV 🔮'} else if (nivelAtual === 35) {patt = 'Mítico V 🔮'} else if (nivelAtual === 36) {patt = 'God I🕴'} else if (nivelAtual === 37) {patt = 'God II🕴'} else if (nivelAtual === 38) {patt = 'God III🕴'} else if (nivelAtual === 39) {patt = 'God IV🕴'} else if (nivelAtual === 40) {patt = 'God V🕴'} else if (nivelAtual > 41) {patt = '🛐Grande Mestre🛐'}
           
 //_TIPO DE USUÁRIO
-if (groupAdmins) {prema = 'Ademir🤓'}if (isPremium) {prema = 'Premium😎'} if (isOwner) {prema = 'El Italu🕴🏽'} if (isUser) {prema = 'Registrado 🥳'} else {var prema = 'Membro comum🗿'}
+if (groupAdmins) {prema = 'Ademir🤓'}if (isPremium) {prema = 'Premium😎'} if (isOwner) {prema = 'El 𝐾𝐴𝑁𝑇 𝐿𝑆🕴🏽'} if (isUser) {prema = 'Registrado 🥳'} else {var prema = 'Membro comum🗿'}
 
 //_XP COM LEVELING ATIVO
 if (isGroup && isLevelingOn) {
@@ -1570,7 +1570,7 @@ tiringa.close() }, 3000)
 break
 
 //_NULIS
-case 'nulis':
+case 'nulis': 
 if (args.length < 1) return reply(`Use o comando da seguinte forma: ${prefix}nulis (texto)`)
 teks = body.slice(7)
 reply(ptbr.wait())
@@ -2983,7 +2983,7 @@ if (!isGroupAdmins) return reply(ptbr.admin())
 if (!isBotGroupAdmins) return reply(ptbr.Badmin())
 idgrup = `${from.split("@s.whatsapp.net")[0]}`;
 tiringa.groupUpdateSubject(idgrup, `${body.slice(9)}`)
-tiringa.sendMessage(from, 'nome do grupo alterado', text, {
+𝐾𝐴𝑁𝑇 𝐿𝑆.sendMessage(from, 'nome do grupo alterado', text, {
 quoted: mek
 })
 break
@@ -3065,7 +3065,7 @@ break
 
 //_MENCIONA TODOS OS MEMBROS DO GRUPO 
 case 'hidetag':
-tiringa.updatePresence(from, Presence.composing) 
+KANT.updatePresence(from, Presence.composing) 
 if (!isOwner) return reply(ptbr.ownerB())
 if (!isGroup) return reply(ptbr.group())
 htg = body.slice(9)
@@ -3475,7 +3475,7 @@ addLimit(sender, daily)
 break
 
 case 'ttthelp':
-tiringa.sendMessage(from, ttthelp(prefix), text)
+𝐾𝐴𝑁𝑇 𝐿𝑆.sendMessage(from, ttthelp(prefix), text)
 break
 
 case 'tttme':
